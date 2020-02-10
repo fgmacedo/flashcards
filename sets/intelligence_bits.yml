@@ -1,0 +1,8 @@
+
+raças-cães:
+  output_dir: bits
+  page_height: 280
+  page_width: 280
+  font_color: 000000
+  words:
+  - Husky siberiano

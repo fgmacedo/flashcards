@@ -1,0 +1,410 @@
+partes-do-corpo:
+- barriga
+- boca
+- bochecha
+- braço
+- bumbum
+- cabeça
+- cabelo
+- cotovelo
+- dedos
+- dente
+- joelho
+- lábios
+- língua
+- mão
+- nariz
+- olho
+- ombro
+- orelha
+- pé
+- perna
+- pescoço
+- polegar
+- testa
+- umbigo
+
+casa:
+- armário
+- banheira
+- banheiro
+- cadeira
+- cama
+- chuveiro
+- cozinha
+- fogão
+- garagem
+- gaveta
+- geladeira
+- janela
+- lâmpada
+- mesa
+- parede
+- porta
+- prateleira
+- quarto
+- sala
+- sofá
+- televisão
+- varanda
+- panela
+- estante
+
+objetos-posse:
+- bola
+- colher
+- escova
+- copo
+- prato
+- garfo
+- brinquedo
+- toalha
+- livro
+- travesseiro
+- manta
+- bolsa
+- mochila
+- pelúcia
+- ventilador
+
+alimentos:
+- abóbora
+- água
+- batata
+- beterraba
+- café
+- cará
+- carne
+- cebola
+- cenoura
+- chuchu
+- ervilha
+- feijão
+- frango
+- fruta
+- geléia
+- iogurte
+- leite
+- linguiça
+- macarrão
+- mandioca
+- mandioquinha
+- manteiga
+- milho
+- ovo
+- omelete
+- pão
+- queijo
+- sopa
+- suco
+- tapioca
+
+frutas:
+- abacate
+- abacaxi
+- abobrinha
+- açaí
+- acerola
+- ameixa
+- amora
+- banana
+- berinjela
+- cacau
+- cajá
+- caju
+- caqui
+- carambola
+- cereja
+- coco
+- cupuaçu
+- damasco
+- figo
+- framboesa
+- goiaba
+- graviola
+- groselha
+- guaraná
+- jabuticaba
+- kiwi
+- laranja
+- lichia
+- limão
+- macadâmia
+- maçã
+- mamão
+- manga
+- maracujá
+- melancia
+- melão
+- mexerica
+- mirtilo
+- morango
+- pepino
+- pera
+- pêssego
+- pistache
+- pitaia
+- pitanga
+- romã
+- tâmara
+- tamarindo
+- tangerina
+- tomate
+- uva
+
+vestuário:
+- bermuda
+- biquini
+- blusa
+- boné
+- calça
+- calcinha
+- camisa
+- casaco
+- chapéu
+- chinelo
+- cinto
+- cueca
+- macacão
+- meia
+- pijama
+- roupa
+- sandália
+- sapato
+- shorts
+- touca
+- vestido
+
+animais:
+- baleia
+- cabra
+- cachorro
+- cavalo
+- cobra
+- coelho
+- coruja
+- dinossauro
+- elefante
+- galinha
+- gato
+- girafa
+- golfinho
+- gorila
+- hipopótamo
+- jacaré
+- leão
+- macaco
+- minhoca
+- ovelha
+- passarinho
+- pato
+- peixe
+- pinguim
+- pombo
+- pônei
+- porco
+- rato
+- rinoceronte
+- sapo
+- tartaruga
+- tigre
+- tubarão
+- urso
+- vaca
+- zebra
+
+insetos:
+- abelha
+- aranha
+- barata
+- besouro
+- borboleta
+- formiga
+- joanilha
+- mosca
+- mosquito
+- pernilongo
+- piolho
+- pulga
+
+família:
+- Crislene
+- Eliane
+- Elias
+- Ester
+- Fernando
+- Frodo
+- Fuínha
+- Giovanna
+- irmã
+- irmão
+- Kelly
+- Luiza
+- mamãe
+- papai
+- Paulo
+- prima
+- Sarah
+- Solange
+- tia
+- tio
+- vovó
+- vovô
+- amigos
+- família
+
+ações:
+- abraçando
+- almoçando
+- andando
+- assistindo
+- bebendo
+- beijando
+- brincando
+- calçando
+- cantando
+- caminhando
+- chorando
+- comendo
+- conversando
+- coçando
+- correndo
+- dançando
+- desenhando
+- dormindo
+- engatinhando
+- escrevendo
+- esperando
+- falando
+- fazendo
+- indo
+- jantando
+- jogando
+- lendo
+- limpando
+- mamando
+- orando
+- nadando
+- olhando
+- pulando
+- rindo
+- sorrindo
+- subindo
+- tocando
+- tomando
+- usando
+- vestindo
+- viajando
+- voando
+
+brincadeiras:
+- banho
+- basquete
+- boliche
+- boneca
+- futebol
+- ginástica
+- natação
+- vôley
+- balé
+
+cores:
+- azul
+- amarelo
+- vermelho
+- branco
+- preto
+- verde
+- roxo
+- rosa
+- marrom
+- cinza
+- dourado
+- prateado
+
+modificadoras:
+- grande
+- pequeno
+- gordo
+- magro
+- limpo
+- sujo
+- liso
+- áspero
+- bonito
+- feio
+- comprido
+- curto
+- direito
+- esquerdo
+- feliz
+- triste
+- vazio
+- cheio
+- escuro
+- claro
+- brilhante
+
+lugares:
+- campo
+- cinema
+- circo
+- clube
+- escola
+- fazenda
+- igreja
+- mar
+- mercado
+- parque
+- piscina
+- praia
+- shopping
+- teatro
+- zoológico
+
+transporte:
+- avião
+- balão
+- barco
+- bicicleta
+- caminhão
+- canoa
+- carro
+- foguete
+- helicóptero
+- moto
+- navio
+- ônibus
+- submarino
+- trem
+- triciclo
+
+pares-palavras:
+  font_size: 160
+  words:
+  - bola laranja
+  - olho azul
+  - banana amarela
+  - vestido vermelho
+  - sapato preto
+  - calça rosa
+  - uva roxa
+  - cabelo marrom
+  - maçã verde
+  - geladeira cinza
+
+  - copo cheio
+  - copo vazio
+  - cadeira grande
+  - cadeira pequena
+  - mamãe feliz
+  - mamãe triste
+  - cabelo longo
+  - cabelo curto
+  - blusa limpa
+  - blusa suja
+  - mão direita
+  - mão esquerda
+  - roupa bonita
+  - roupa feia
+

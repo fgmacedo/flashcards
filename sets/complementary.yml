@@ -1,0 +1,44 @@
+wps_9_complementares:
+  allow_repeated: True
+  page_width: 140  # 420 / 3
+  words_per_sheet: 9
+  font_size: 140
+  words:
+  - está
+  - está
+  - está
+  - está
+  - gosta
+  - estão
+  - para
+  - com
+  - uma
+
+wps_12_complementares-artigos:
+  allow_repeated: True
+  page_width: 105  # 420 / 4
+  words_per_sheet: 12
+  words:
+  - a
+  - a
+  - o
+  - o
+  - de
+  - e
+  - e
+  - "no"
+  - na
+  - em
+  - em
+  - à
+  - ao
+  - é
+  - é
+  - A
+  - O
+  - de
+  - "."
+  - ","
+  - ","
+  - um
+  - um
