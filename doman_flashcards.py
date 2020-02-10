@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-Generate Glenn Doman method PDF files for words in an YAML file.
+Generate Glenn Doman flash cards PDF files for words in an YAML file.
 
 Requirements:
     pip install pyyaml reportlab
@@ -30,7 +30,7 @@ Example 'words.yml':
 
 Usage:
 
-    python doman_plates.py words.yml
+    python doman_flashcards.py words.yml
 """
 
 import logging
@@ -176,9 +176,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "-pw",
         "--page_width",
-        default=420,
+        default=440,
         type=int,
-        help="Page width in mm. Default to A3 width (420mm)."
+        help="Page width in mm. Default to A3 width (440mm)."
     )
     parser.add_argument(
         "-ph",
