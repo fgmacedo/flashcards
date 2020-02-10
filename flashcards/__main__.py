@@ -33,17 +33,35 @@ Usage:
     python -m flashcards words.yml
 """
 
+import os
+import argparse
 import logging
+import re
+from copy import copy
+
 from .flashcards import generate, ensure_dir, register_custom_font, extract_valid_words
 
 logger = logging.getLogger(__name__)
 
 
-if __name__ == "__main__":
-    import os
-    import argparse
-    from copy import copy
+COLOR_HEXA_PATTERN = re.compile(r'#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})')
+COLOR_CMYK_PATTERN = re.compile(r'(\d+,\d+,\d+,\d+)')
 
+
+def parse_color(value):
+    from reportlab.lib.colors import HexColor, PCMYKColor
+    match = COLOR_HEXA_PATTERN.search(value)
+    if match:
+        hex = match.group(1).lower()
+        return HexColor(f'0x{hex}')
+    match = COLOR_CMYK_PATTERN.search(value)
+    if match:
+        cmyk = [int(x) for x in match.group(1).split(",")]
+        return PCMYKColor(*cmyk)
+    raise ValueError(f"The '{value}' is not a valid color.")
+
+
+if __name__ == "__main__":
     try:
         import yaml
     except ImportError:
@@ -81,8 +99,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "-fc",
         "--font_color",
-        default="ff0000",
-        help="Font color in hexadecimal. Defaults to RED (ff0000)."
+        default="#ff0000",
+        type=parse_color,
+        help=(
+            "Font color in hexadecimal (eg. #ff0000) or in CMYK (eg. 0,100,100,0). "
+            "Defaults to CMYK red (0,100,100,0)."
+        )
     )
     parser.add_argument(
         "-pw",
@@ -173,7 +195,11 @@ if __name__ == "__main__":
         config.page_width = config.page_width * mm
         config.page_size = (config.page_height, config.page_width)
 
-        words = extract_valid_words(words, already_seen_words, config.allow_repeated)
+        words, invalid = extract_valid_words(words, already_seen_words, config.allow_repeated)
+        if invalid and not config.allow_repeated:
+            logger.warning(
+                f"Ignored {len(invalid)} already seen word(s) in '{group}': {invalid}"
+            )
 
         if config.words_per_sheet:
             remainder = len(words) % config.words_per_sheet

@@ -13,7 +13,6 @@ def ensure_dir(dir_name):
 def generate(group, words, config):
     from reportlab.pdfgen import canvas
     from reportlab.lib.pagesizes import landscape
-    from reportlab.lib.colors import HexColor, PCMYKColor
     from reportlab.pdfbase.pdfmetrics import stringWidth
 
     output_file = f'{config.output_dir}/{group}.pdf'
@@ -38,7 +37,7 @@ def generate(group, words, config):
 
         c.setFont(config.font_name, font_size)
         # c.setFillColor(HexColor(f'0x{config.font_color}'))
-        c.setFillColor(PCMYKColor(0, 100, 100, 0))
+        c.setFillColor(config.font_color)
         c.drawCentredString(*word_position, word)
         c.showPage()
         yield word
@@ -64,17 +63,10 @@ def extract_valid_words(words, already_seen_words, allow_repeated):
 
     words_in_group = Counter(words)
     repeated_words = [word for word, count in words_in_group.items() if count > 1]
-    if repeated_words and not allow_repeated:
-        logger.warning(
-            f"Ignored {len(repeated_words)} already seen word(s) in '{group}': {repeated_words}")
-
     words_in_group = set(words_in_group)
     new_words = words_in_group - already_seen_words
     ignored_words = words_in_group - new_words
-    if ignored_words and not allow_repeated:
-        logger.warning(
-            f"Ignored {len(ignored_words)} already seen word(s) in '{group}': {ignored_words}")
-    return sorted(new_words)
+    return sorted(new_words), set(repeated_words).union(ignored_words)
 
 
 def reduce_font_size_to_fit(word, word_width, config):
