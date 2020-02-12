@@ -30,15 +30,22 @@ casa:
 - banheiro
 - cadeira
 - cama
+- câmera
+- caneta
+- chave
 - chuveiro
+- colchão
 - cozinha
+- estante
 - fogão
 - garagem
+- garrafa
 - gaveta
 - geladeira
 - janela
 - lâmpada
 - mesa
+- panela
 - parede
 - porta
 - prateleira
@@ -46,44 +53,58 @@ casa:
 - sala
 - sofá
 - televisão
+- toalha
 - varanda
-- panela
-- estante
+
 
 objetos-posse:
 - bola
-- colher
-- escova
-- copo
-- prato
-- garfo
-- brinquedo
-- toalha
-- livro
-- travesseiro
-- manta
 - bolsa
+- brinco
+- brinquedo
+- cobertor
+- colher
+- copo
+- escova
+- fralda
+- garfo
+- laço
+- lenço
+- livro
+- manta
 - mochila
+- óculos
 - pelúcia
+- prato
+- sabonete
+- travesseiro
 - ventilador
 
 alimentos:
 - abóbora
 - água
+- alface
+- arroz
 - batata
 - beterraba
+- brócolis
 - café
+- castanha
 - cará
 - carne
 - cebola
 - cenoura
+- chá
 - chuchu
+- couve
 - ervilha
 - feijão
 - frango
 - fruta
 - geléia
+- giló
 - iogurte
+- imhame
 - leite
 - linguiça
 - macarrão
@@ -91,12 +112,16 @@ alimentos:
 - mandioquinha
 - manteiga
 - milho
+- mostarda
+- nozes
 - ovo
 - omelete
 - pão
 - queijo
+- quiabo
 - sopa
 - suco
+- repolho
 - tapioca
 
 frutas:
@@ -227,7 +252,8 @@ insetos:
 - piolho
 - pulga
 
-família:
+
+relacionamentos:
 - Crislene
 - Eliane
 - Elias
@@ -250,8 +276,11 @@ família:
 - tio
 - vovó
 - vovô
-- amigos
+- amigo
 - família
+- bebê
+- Mônica
+- Marcos
 
 ações:
 - abraçando
@@ -331,6 +360,10 @@ modificadoras:
 - sujo
 - liso
 - áspero
+- duro
+- mole
+- macio
+- crespo
 - bonito
 - feio
 - comprido
@@ -344,20 +377,43 @@ modificadoras:
 - escuro
 - claro
 - brilhante
+- desbotado
+- frio
+- calor
+- gelado
+- quente
+- legal
+- azedo
+- amargo
+- doce
+- salgado
+- simples
+- complicado
+- certo
+- errado
 
 lugares:
+- apartamento
+- biblioteca
 - campo
+- casa
+- cidade
 - cinema
 - circo
 - clube
 - escola
 - fazenda
+- floresta
 - igreja
+- jardim
 - mar
 - mercado
+- museu
+- país
 - parque
 - piscina
 - praia
+- restaurante
 - shopping
 - teatro
 - zoológico
@@ -378,6 +434,31 @@ transporte:
 - submarino
 - trem
 - triciclo
+
+natureza:
+- dia
+- noite
+- chuva
+- sol
+- raio
+- trovão
+- garoa
+- terra
+- alho
+- carinho
+- arvore
+- flor
+
+instrumentos:
+- pandeiro
+- microfone
+- violão
+- guitarra
+- bateria
+- contra-baixo
+- violino
+- saxofone
+- flauta
 
 pares-palavras:
   font_size: 160
@@ -407,4 +488,3 @@ pares-palavras:
   - mão esquerda
   - roupa bonita
   - roupa feia
-

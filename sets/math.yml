@@ -1,0 +1,7 @@
+
+math_a4:
+  output_dir: bits
+  font_size: 15
+  page_height: 210
+  page_width: 297
+  math: True

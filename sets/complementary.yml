@@ -1,6 +1,6 @@
 wps_9_complementares:
   allow_repeated: True
-  page_width: 140  # 420 / 3
+  page_width: 146  # 420 / 3
   words_per_sheet: 9
   font_size: 140
   words:
@@ -16,7 +16,7 @@ wps_9_complementares:
 
 wps_12_complementares-artigos:
   allow_repeated: True
-  page_width: 105  # 420 / 4
+  page_width: 110  # 420 / 4
   words_per_sheet: 12
   words:
   - a
@@ -26,6 +26,7 @@ wps_12_complementares-artigos:
   - de
   - e
   - e
+  - "no"
   - "no"
   - na
   - em

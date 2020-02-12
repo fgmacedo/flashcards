@@ -37,9 +37,17 @@ import os
 import argparse
 import logging
 import re
+import math
 from copy import copy
 
-from .flashcards import generate, ensure_dir, register_custom_font, extract_valid_words
+from .flashcards import (
+    generate,
+    generate_math,
+    ensure_dir,
+    register_custom_font,
+    extract_valid_words,
+    generate_math,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -99,7 +107,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-fc",
         "--font_color",
-        default="#ff0000",
+        default="0,100,100,0",
         type=parse_color,
         help=(
             "Font color in hexadecimal (eg. #ff0000) or in CMYK (eg. 0,100,100,0). "
@@ -181,8 +189,10 @@ if __name__ == "__main__":
         config = copy(args)
 
         if isinstance(values, dict):
-            words = values.pop('words')
+            words = values.pop('words', None)
             for k, v in values.items():
+                if k == 'font_color':
+                    v = parse_color(v)
                 setattr(config, k, v)
         else:
             words = values
@@ -194,6 +204,10 @@ if __name__ == "__main__":
         config.page_height = config.page_height * mm
         config.page_width = config.page_width * mm
         config.page_size = (config.page_height, config.page_width)
+
+        if hasattr(config, 'math'):
+            generate_math(group, config)
+            continue
 
         words, invalid = extract_valid_words(words, already_seen_words, config.allow_repeated)
         if invalid and not config.allow_repeated:
@@ -215,4 +229,8 @@ if __name__ == "__main__":
         total_words += len(generated)
         already_seen_words = already_seen_words.union(set(generated))
 
-    logger.info(f"Wrote {total_words} words into {len(word_groups)} files.")
+    total_sheets = math.ceil(total_words / config.words_per_sheet)
+    logger.info(
+        f"Wrote {total_words} words into {len(word_groups)} files. "
+        f"Expect to use near {total_sheets} sheets."
+    )
